@@ -5,3 +5,9 @@ Core 5.0 (Because that's the newest I have installed)
 
 I have not done TDD in production code so we'll see how this goes.
 
+Using DateTimeOffset incidentDate as this version doesn't have date and offset is more reliable across timezones.
+I would probably use a record here as it doesn't look like claim has any behavior.
+
+Running into data type issues with test framework and not taking time now to fix.
+
+I'm spending way too much time fiddling with the tests
