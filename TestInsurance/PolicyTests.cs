@@ -24,7 +24,7 @@ namespace TestInsurance
             Assert.AreEqual(endDate, policy.endDate);
             Assert.AreEqual(deductible, policy.deductible);
             Assert.AreEqual(coverageLimit, policy.coverageLimit);
-            Assert.AreEqual(coveredIncidents, policy.coveredIncidents);
+            Assert.AreEqual(coveredIncidents, policy.coveredIncidents);// bad test here
 
         }
     }

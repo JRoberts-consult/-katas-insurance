@@ -25,5 +25,39 @@ namespace InsuranceCore
             this.coveredIncidents = coveredIncidents;
 
         }
+
+        public ClaimResult processClaim(Claim claim)
+        {
+            ClaimResult result = new ClaimResult();  // thinking we may build this incrimentally
+            if (claim.incidentDate < startDate || claim.incidentDate > endDate)
+            {
+                result.approved = false;
+                result.payout = 0;
+                result.reasonCode = "POLICY_INACTIVE";
+                return result;
+            }
+            if (!coveredIncidents.Any(incidentType => incidentType == claim.incidentType))// would probably toupper
+            {
+                result.approved = false;
+                result.payout = 0;
+                result.reasonCode = "NOT_COVERED";
+                return result;
+            }
+            result.payout = Math.Min( claim.amountClaimed - deductible, coverageLimit);
+            if (result.payout < 0m)
+                result.payout = 0m;
+            if (result.payout == 0m)
+            {
+                result.reasonCode = "ZERO_PAYOUT";
+                result.approved = false; //assumsion
+            }
+            else
+            {
+                result.reasonCode = "APPROVED";
+                result.approved = true; 
+
+            }
+            return result;
+        }
     }
 }

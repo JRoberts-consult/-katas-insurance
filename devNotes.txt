@@ -11,3 +11,5 @@ I would probably use a record here as it doesn't look like claim has any behavio
 Running into data type issues with test framework and not taking time now to fix.
 
 I'm spending way too much time fiddling with the tests
+
+Time.  Logic finished (Not test first.  Will add tests)
