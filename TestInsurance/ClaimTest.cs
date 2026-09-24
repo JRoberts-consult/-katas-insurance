@@ -3,11 +3,12 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace TestInsurance
 {
     [TestClass]
-    public class UnitTest1
+    public class ClaimTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void CreateClaim()
         {
+            Claim = new Claim();
         }
     }
 }
