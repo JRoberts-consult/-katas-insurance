@@ -1,2 +1,7 @@
 Dev Log:
+Using vs2019 (because I have it)
+c# (because I am used to test framework with it)
+Core 5.0 (Because that's the newest I have installed)
+
+I have not done TDD in production code so we'll see how this goes.
 

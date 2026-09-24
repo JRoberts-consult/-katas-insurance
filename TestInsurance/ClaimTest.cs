@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using InsuranceCore;
 
 namespace TestInsurance
 {
@@ -8,7 +9,7 @@ namespace TestInsurance
         [TestMethod]
         public void CreateClaim()
         {
-            Claim = new Claim();
+            Claim claim = new Claim();
         }
     }
 }
